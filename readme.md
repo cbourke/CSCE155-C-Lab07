@@ -263,12 +263,15 @@ In this exercise, we'll observe and fix a memory leak in action.
 ## Static to Dynamic Arrays
 
 Navigate to the `exercises` directory.  Several starter files
-have been provided for you.  Recall that you can compile these
-files using:
+have been provided for you.  The starter demo file `array_demo.c`
+can be used to perform ad-hoc tests as you write your functions.
+Recall that you can compile these files using:
 ```text
 gcc -c array_utils.c
-gcc array_utils.o arrayMain.c
+gcc array_utils.o array_demo.c
 ```
+*or*: we have provided a `makefile` that you can use (simply
+type `make array_demo`).
 
 The program, as provided, generates an integer array
 of size 10 filled with random values, prints the result
@@ -332,8 +335,10 @@ utility functions.  For each function below:
 1. Write documentation in the `array_utils.h` file in your own
    words so you have an understanding of what it does.
 2. Implement the function in the `array_utils.c` file.
-3. Test your function in the `arrayMain.c` file to verify it
-   works.
+3. You can do ad-hoc testing using the `array_demo.c` or
+   you can run a much larger cmocka test file (compile
+   it using `make array_test`) that will be used for grading.
+
 Look for ways to make your life easier: some functions may
 be able to utilize others.
 
@@ -375,11 +380,10 @@ be able to utilize others.
 
 ## Handin/Grader Instructions
 
-* Hand in your completed source file, `array_utils.c` and
-  header file `array_utils.h` through the handin and verify
-  your program is correct by using the grader.
-* Even if you worked with a partner, you *both* need to
-  turn in all files.
+Compile and run the `cmocka` tests and make sure they all pass.  
+Hand in your completed source file, `array_utils.c` and
+header file `array_utils.h` through the handin and verify
+your program is correct by using the grader.
 
 ## Advanced Activity (Optional)
 

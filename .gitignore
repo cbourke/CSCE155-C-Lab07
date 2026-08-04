@@ -35,5 +35,8 @@ figures/_minted*
 *.o
 memoryLeak/memLink
 
-#
+# Project specific files
+exercises/array_demo
+exercises/array_test
+memoryLeak/memLeak
 solution/
